@@ -6,6 +6,12 @@ ByteSpace is an ultra-modern, high-performance web platform designed for tech en
 
 ---
 
+<p align="center">
+  <img src="./public/assets/hero_preview.png" alt="ByteSpace Hero Preview" width="100%" />
+</p>
+
+---
+
 ## 🌟 Key Features
 
 - **Dynamic Homepage**: High-impact hero section, partner logos, curated course categories, testimonials, and growth statistics.
