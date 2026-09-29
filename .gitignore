@@ -23,5 +23,14 @@ powershell.cmd
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
+
+# Testing & Coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Temporary & Caches
+.eslintcache
+.cache
+Thumbs.db
