@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ByteSpaceLogo from './ByteSpaceLogo';
+import Toast from './Toast';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setTimeout(() => setSubscribed(false), 4000);
+    if (email && email.includes('@')) {
+      setToastMessage('Thank you for subscribing to ByteSpace updates!');
       setEmail('');
     }
   };
@@ -50,11 +50,6 @@ export default function Footer() {
                     Search
                   </button>
                 </div>
-                {subscribed && (
-                  <p className="text-xs text-green-600 font-medium mt-2">
-                    ✓ Thank you for subscribing to ByteSpace updates!
-                  </p>
-                )}
                 <p className="text-xs text-[#82868E] leading-relaxed mt-4">
                   By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
                 </p>
@@ -177,6 +172,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <Toast 
+        message={toastMessage} 
+        type="success" 
+        onClose={() => setToastMessage('')} 
+      />
     </footer>
   );
 }
