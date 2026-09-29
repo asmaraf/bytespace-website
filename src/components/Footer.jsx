@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ByteSpaceLogo from './ByteSpaceLogo';
 import Toast from './Toast';
+import GlowBlob from './GlowBlob';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -16,8 +17,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-white border-t border-[#F0F1F3] pt-16 sm:pt-20 pb-12">
-      <div className="max-w-[1240px] mx-auto px-6">
+    <footer className="w-full bg-white border-t border-[#F0F1F3] pt-16 sm:pt-20 pb-12 relative overflow-hidden">
+      {/* Soft Blue Atmospheric Glow on Left Edge */}
+      <GlowBlob
+        color="blue"
+        className="absolute -left-36 -top-20 w-[650px] h-[650px] sm:w-[850px] sm:h-[850px]"
+        blur="blur-[120px]"
+        opacity="opacity-75"
+      />
+
+      <div className="max-w-[1240px] mx-auto px-6 relative z-10">
         {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-16">
           {/* Newsletter & Brand */}

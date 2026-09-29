@@ -13,6 +13,12 @@ export default function CtaBanner() {
         opacity="opacity-70"
       />
       <GlowBlob
+        color="blue"
+        className="absolute -right-24 -top-12 w-[650px] h-[650px] sm:w-[800px] sm:h-[800px]"
+        blur="blur-[120px]"
+        opacity="opacity-75"
+      />
+      <GlowBlob
         color="lime"
         className="absolute -right-20 bottom-1/4 w-[550px] h-[550px]"
         blur="blur-[110px]"

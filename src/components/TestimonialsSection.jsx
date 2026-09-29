@@ -12,12 +12,12 @@ export default function TestimonialsSection() {
         blur="blur-[120px]"
         opacity="opacity-80"
       />
-      {/* Figma Matched Blue Glow on Left */}
+      {/* Figma Matched Blue Glow on Left Edge */}
       <GlowBlob
         color="blue"
-        className="absolute -left-24 bottom-0 w-[600px] h-[600px]"
-        blur="blur-[110px]"
-        opacity="opacity-50"
+        className="absolute -left-36 -bottom-16 w-[750px] h-[750px] sm:w-[950px] sm:h-[950px]"
+        blur="blur-[120px]"
+        opacity="opacity-80"
       />
 
       <div className="max-w-[1240px] mx-auto px-6 relative z-10">

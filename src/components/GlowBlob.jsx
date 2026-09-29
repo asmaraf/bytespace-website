@@ -28,8 +28,10 @@ export default function GlowBlob({
         // Luminous white core surrounded by electric lime
         return 'radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(203, 252, 1, 0.6) 35%, rgba(203, 252, 1, 0.2) 65%, transparent 100%)';
       case 'blue':
-        // Figma exact Persian Blue: rgba(0, 59, 226, ...)
-        return 'radial-gradient(circle at 50% 50%, rgba(0, 59, 226, 0.28) 0%, rgba(0, 59, 226, 0.08) 55%, transparent 100%)';
+        // Vibrant Persian & Royal Blue for atmospheric side glow matching screenshot
+        return 'radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.35) 0%, rgba(0, 59, 226, 0.20) 45%, rgba(0, 59, 226, 0.06) 70%, transparent 100%)';
+      case 'blue-soft':
+        return 'radial-gradient(circle at 50% 50%, rgba(0, 59, 226, 0.22) 0%, rgba(0, 59, 226, 0.06) 55%, transparent 100%)';
       case 'white':
         return 'radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%)';
       default:

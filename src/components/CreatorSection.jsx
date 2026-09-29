@@ -26,12 +26,12 @@ export default function CreatorSection() {
         opacity="opacity-70"
       />
 
-      {/* 2. Soft Blue Atmosphere on Right */}
+      {/* 2. Soft Blue Atmosphere on Right Edge matching Screenshot */}
       <GlowBlob
         color="blue"
-        className="absolute -right-24 top-1/4 w-[500px] h-[500px]"
-        blur="blur-[100px]"
-        opacity="opacity-60"
+        className="absolute -right-20 sm:-right-28 top-1/4 w-[600px] h-[600px] sm:w-[800px] sm:h-[800px]"
+        blur="blur-[120px]"
+        opacity="opacity-85"
       />
 
       {/* 3. Floating 3D Lime Ribbon Ornament (Bottom-Left from Figma) */}
