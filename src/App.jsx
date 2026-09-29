@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import SearchPage from './pages/SearchPage';
 import CourseDetailsPage from './pages/CourseDetailsPage';
 import CreatorPage from './pages/CreatorPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -14,6 +15,8 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/courses" element={<SearchPage />} />
         <Route path="/course-details" element={<CourseDetailsPage />} />
         <Route path="/course/:id" element={<CourseDetailsPage />} />
         <Route path="/courses/:id" element={<CourseDetailsPage />} />
