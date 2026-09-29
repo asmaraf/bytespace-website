@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import GridBackground from '../components/GridBackground';
 import ByteSpaceLogo from '../components/ByteSpaceLogo';
+import Toast from '../components/Toast';
 import { courses } from '../data/coursesData';
 
 export default function CourseDetailsPage() {
@@ -15,6 +16,7 @@ export default function CourseDetailsPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
   const [selectedRating, setSelectedRating] = useState('all');
+  const [toastMessage, setToastMessage] = useState('');
 
   const videoRef = useRef(null);
   const [blueHeight, setBlueHeight] = useState(957);
@@ -70,6 +72,7 @@ export default function CourseDetailsPage() {
   const handleShare = () => {
     navigator.clipboard?.writeText(window.location.href);
     setShareCopied(true);
+    setToastMessage('Course link copied to clipboard!');
     setTimeout(() => setShareCopied(false), 2500);
   };
 
@@ -855,6 +858,12 @@ export default function CourseDetailsPage() {
       {/* 3. FOOTER                                                */}
       {/* ======================================================== */}
       <Footer />
+
+      <Toast
+        message={toastMessage}
+        type="success"
+        onClose={() => setToastMessage('')}
+      />
     </div>
   );
 }
