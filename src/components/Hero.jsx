@@ -48,11 +48,13 @@ export default function Hero({ onSearch }) {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Course, topic, creator"
+                aria-label="Search courses, topics, or creators"
                 className="w-full bg-transparent text-[#242528] text-base placeholder-[#82868E] focus:outline-none"
               />
             </div>
             <button
               type="submit"
+              aria-label="Submit search"
               className="bg-[#D4FB20] hover:bg-[#c9f212] active:scale-95 text-[#242528] font-medium text-[15px] px-7 py-3 rounded-full transition-all duration-200 cursor-pointer shadow-sm shrink-0"
             >
               Search
