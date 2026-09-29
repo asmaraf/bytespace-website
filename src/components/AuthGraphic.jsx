@@ -1,17 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ByteSpaceLogo from './ByteSpaceLogo';
 
 export default function AuthGraphic({ title, description }) {
   return (
     <div className="flex flex-col justify-between h-full min-h-[600px] text-white">
       {/* Top Header / Logo */}
       <div>
-        <Link to="/" className="inline-flex items-center gap-3 group mb-10">
-          <img 
-            src="/assets/bytespace_logo_white.svg" 
-            alt="ByteSpace" 
-            className="h-7 md:h-8 object-contain transition-transform group-hover:scale-105 duration-200" 
-          />
+        <Link to="/" className="inline-flex items-center gap-3 group mb-10 transition-transform hover:scale-105 duration-200">
+          <ByteSpaceLogo white />
         </Link>
 
         {/* Heading & Subtitle */}

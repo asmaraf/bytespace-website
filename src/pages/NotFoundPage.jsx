@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import GridBackground from '../components/GridBackground';
+import ByteSpaceLogo from '../components/ByteSpaceLogo';
 
 export default function NotFoundPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,12 +20,8 @@ export default function NotFoundPage() {
         <header className="relative w-full z-30">
           <div className="max-w-[1280px] mx-auto px-6 lg:px-8 h-24 flex items-center justify-between">
             {/* ByteSpace Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
-              <img 
-                src="/assets/bytespace_logo_white.svg" 
-                alt="ByteSpace" 
-                className="h-7 md:h-8 object-contain transition-transform group-hover:scale-105 duration-200" 
-              />
+            <Link to="/" className="flex items-center gap-3 group transition-transform hover:scale-105 duration-200">
+              <ByteSpaceLogo white />
             </Link>
 
             {/* Center Navigation Links */}

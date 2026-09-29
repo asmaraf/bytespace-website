@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import GridBackground from '../components/GridBackground';
+import ByteSpaceLogo from '../components/ByteSpaceLogo';
 
 // Extended catalogue of courses for the Search & Browse page
 const fullCourseCatalog = [
@@ -335,12 +336,8 @@ export default function SearchPage() {
         <header className="relative w-full z-30">
           <div className="max-w-[1240px] mx-auto px-6 h-24 flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
-              <img 
-                src="/assets/bytespace_logo_white.svg" 
-                alt="ByteSpace" 
-                className="h-7 md:h-8 object-contain transition-transform group-hover:scale-105 duration-200" 
-              />
+            <Link to="/" className="flex items-center gap-3 group transition-transform hover:scale-105 duration-200">
+              <ByteSpaceLogo white />
             </Link>
 
             {/* Center Navigation */}
@@ -657,6 +654,12 @@ export default function SearchPage() {
                         alt={course.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
+                        onError={(e) => {
+                          if (!e.currentTarget.dataset.retried) {
+                            e.currentTarget.dataset.retried = "1";
+                            e.currentTarget.src = "/assets/course_video_preview.png";
+                          }
+                        }}
                       />
                       <div className="absolute inset-x-2.5 bottom-2.5 flex items-center justify-between gap-1.5 z-10">
                         <span className="bg-white/85 backdrop-blur-md text-[11px] font-medium text-[#242528] px-2.5 py-1 rounded-full shadow-sm">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ByteSpaceLogo from './ByteSpaceLogo';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -24,11 +25,7 @@ export default function Footer() {
             <div>
               {/* Logo */}
               <Link to="/" className="inline-block mb-6">
-                <img
-                  src="/assets/bytespace_logo_full.svg"
-                  alt="ByteSpace"
-                  className="h-7 md:h-8 object-contain"
-                />
+                <ByteSpaceLogo />
               </Link>
 
               <p className="text-[#565A65] text-base leading-[1.6] max-w-[460px] font-normal mb-8">

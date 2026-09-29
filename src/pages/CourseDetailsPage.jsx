@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import GridBackground from '../components/GridBackground';
+import ByteSpaceLogo from '../components/ByteSpaceLogo';
 import { courses } from '../data/coursesData';
 
 export default function CourseDetailsPage() {
@@ -230,12 +231,8 @@ export default function CourseDetailsPage() {
       <header className="relative w-full z-30">
         <div className="max-w-[1240px] mx-auto px-6 h-24 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src="/assets/bytespace_logo_white.svg" 
-              alt="ByteSpace" 
-              className="h-7 md:h-8 object-contain transition-transform group-hover:scale-105 duration-200" 
-            />
+          <Link to="/" className="flex items-center gap-3 group transition-transform hover:scale-105 duration-200">
+            <ByteSpaceLogo white />
           </Link>
 
           {/* Center Navigation */}

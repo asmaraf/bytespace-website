@@ -117,6 +117,12 @@ export default function CoursesSection({ searchQuery = '' }) {
                       alt={course.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
+                      onError={(e) => {
+                        if (!e.currentTarget.dataset.retried) {
+                          e.currentTarget.dataset.retried = "1";
+                          e.currentTarget.src = "/assets/course_video_preview.png";
+                        }
+                      }}
                     />
 
                     {/* Badges on bottom of card image */}
