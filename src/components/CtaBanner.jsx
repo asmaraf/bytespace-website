@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 
 export default function CtaBanner() {
   return (
-    <section className="relative py-28 overflow-hidden bg-gradient-to-b from-white via-[#F7F9F4] to-white">
-      {/* 3D Floating Ornaments Background */}
+    <section className="relative min-h-[720px] sm:min-h-[820px] lg:min-h-[900px] py-24 sm:py-32 md:py-40 flex items-center justify-center bg-white overflow-hidden">
+      {/* 3D Floating Ornaments Background Layer */}
       <div 
-        className="pointer-events-none absolute inset-0 max-w-[1720px] mx-auto overflow-hidden opacity-90 z-0 flex items-center justify-center"
+        className="pointer-events-none absolute inset-0 max-w-[1720px] mx-auto z-0 flex items-center justify-center"
         aria-hidden="true"
       >
         <img
           src="/assets/cta_3d_ornaments.png"
           alt=""
-          className="w-full h-auto object-contain select-none"
+          className="w-full h-full max-h-[860px] object-contain select-none opacity-95"
         />
       </div>
 

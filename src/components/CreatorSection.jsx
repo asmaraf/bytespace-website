@@ -29,7 +29,7 @@ export default function CreatorSection() {
 
       {/* 3. Floating 3D Lime Ribbon Ornament (Bottom-Left from Figma) */}
       <div 
-        className="pointer-events-none absolute -left-12 -bottom-12 sm:-left-8 sm:-bottom-8 w-44 sm:w-56 md:w-64 z-0 opacity-90 drop-shadow-[0_20px_35px_rgba(212,251,32,0.35)] select-none"
+        className="pointer-events-none absolute left-0 sm:left-4 bottom-2 sm:bottom-4 w-40 sm:w-52 md:w-60 z-0 opacity-90 drop-shadow-[0_20px_35px_rgba(212,251,32,0.35)] select-none"
         aria-hidden="true"
       >
         <img

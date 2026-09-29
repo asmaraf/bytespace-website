@@ -18,7 +18,7 @@ export default function Hero({ onSearch }) {
         <img 
           src="/assets/hero_3d_ornaments.png" 
           alt="" 
-          className="w-full h-auto object-contain transform -translate-y-6 select-none" 
+          className="w-full h-auto object-contain select-none" 
         />
       </div>
 
