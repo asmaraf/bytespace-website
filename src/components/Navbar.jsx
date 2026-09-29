@@ -99,47 +99,61 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Dropdown */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-[#E8E9EB] px-6 py-4 space-y-3 shadow-lg">
+      <div 
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="bg-white/95 backdrop-blur-xl border-b border-[#E8E9EB] px-6 py-5 space-y-3 shadow-xl">
           <Link 
             to="/" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-base font-semibold text-[#242528] py-1"
+            className={`block text-base py-1.5 transition-colors ${
+              isHomePage ? 'font-semibold text-[#003BE2]' : 'text-[#242528] hover:text-[#003BE2]'
+            }`}
           >
             Home
           </Link>
           <Link 
             to="/courses" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-base text-[#565A65] py-1"
+            className={`block text-base py-1.5 transition-colors ${
+              location.pathname.startsWith('/courses') || location.pathname.startsWith('/search')
+                ? 'font-semibold text-[#003BE2]' 
+                : 'text-[#565A65] hover:text-[#242528]'
+            }`}
           >
             Courses
           </Link>
           <Link 
             to="/creator" 
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-base text-[#565A65] py-1"
+            className={`block text-base py-1.5 transition-colors ${
+              location.pathname.startsWith('/creator')
+                ? 'font-semibold text-[#003BE2]' 
+                : 'text-[#565A65] hover:text-[#242528]'
+            }`}
           >
             Creators
           </Link>
-          <div className="pt-2 border-t border-[#E8E9EB] flex items-center justify-between">
+          <div className="pt-3 border-t border-[#E8E9EB] flex items-center justify-between">
             <Link 
               to="/login" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-sm font-medium text-[#242528]"
+              className="text-sm font-medium text-[#242528] hover:text-[#003BE2] transition-colors"
             >
               Sign In
             </Link>
             <Link 
               to="/register" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-sm font-semibold bg-[#D4FB20] text-[#242528] px-4 py-2 rounded-full"
+              className="text-sm font-semibold bg-[#D4FB20] text-[#242528] hover:bg-[#c9f212] px-5 py-2.5 rounded-full transition-colors shadow-sm"
             >
               Join Us
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
