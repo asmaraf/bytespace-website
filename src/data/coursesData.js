@@ -19,6 +19,25 @@ export const categories = [
   "Cooking"
 ];
 
+// Helper functions for easy querying
+export const getCourseById = (id) => courses.find((c) => String(c.id) === String(id));
+
+export const filterCoursesByCategory = (category) => {
+  if (!category || category === "Featured" || category === "All") return courses;
+  return courses.filter((c) => c.category === category);
+};
+
+export const searchCourses = (query) => {
+  if (!query) return courses;
+  const q = query.toLowerCase().trim();
+  return courses.filter(
+    (c) =>
+      c.title.toLowerCase().includes(q) ||
+      c.author.toLowerCase().includes(q) ||
+      c.category.toLowerCase().includes(q)
+  );
+};
+
 export const courses = [
   {
     id: 1,
