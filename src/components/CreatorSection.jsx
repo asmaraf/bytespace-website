@@ -10,18 +10,40 @@ export default function CreatorSection() {
   ];
 
   return (
-    <section id="creators" className="py-20 relative overflow-hidden bg-white">
-      {/* Background ambient lighting */}
+    <section id="creators" className="py-24 sm:py-32 md:py-36 relative overflow-hidden bg-white">
+      {/* 1. Radiant Lime-Yellow Atmosphere on Bottom-Left (Matches Screenshot) */}
       <div 
-        className="pointer-events-none absolute -right-32 top-1/3 w-[500px] h-[500px] rounded-full bg-[#003BE2]/5 blur-[120px] -z-10"
+        className="pointer-events-none absolute -left-20 -bottom-16 w-[650px] h-[650px] sm:w-[750px] sm:h-[750px] rounded-full bg-[#D4FB20]/40 blur-[120px] -z-10"
+        aria-hidden="true"
+      />
+      <div 
+        className="pointer-events-none absolute left-0 bottom-24 w-[450px] h-[450px] rounded-full bg-[#EEFF55]/25 blur-[100px] -z-10"
         aria-hidden="true"
       />
 
-      <div className="max-w-[1240px] mx-auto px-6">
+      {/* 2. Soft Blue Atmosphere on Right */}
+      <div 
+        className="pointer-events-none absolute -right-24 top-1/4 w-[500px] h-[500px] rounded-full bg-[#003BE2]/10 blur-[120px] -z-10"
+        aria-hidden="true"
+      />
+
+      {/* 3. Floating 3D Lime Ribbon Ornament (Bottom-Left from Figma) */}
+      <div 
+        className="pointer-events-none absolute -left-12 -bottom-12 sm:-left-8 sm:-bottom-8 w-44 sm:w-56 md:w-64 z-0 opacity-90 drop-shadow-[0_20px_35px_rgba(212,251,32,0.35)] select-none"
+        aria-hidden="true"
+      >
+        <img
+          src="/assets/shape_ribbon.png"
+          alt=""
+          className="w-full h-auto object-contain transform -rotate-12"
+        />
+      </div>
+
+      <div className="max-w-[1240px] mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
           {/* Left Column: Visual Showcase */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-start order-2 lg:order-1">
-            <div className="relative w-full max-w-[520px] group transition-transform duration-500 hover:scale-[1.02]">
+            <div className="relative w-full max-w-[560px] p-2 group transition-transform duration-500 hover:scale-[1.02]">
               <img
                 src="/assets/creator_showcase.png"
                 alt="Create & manage courses on ByteSpace"

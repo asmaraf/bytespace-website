@@ -2,14 +2,24 @@ import React from 'react';
 
 export default function GrowthSection() {
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white via-[#FAFBF8] to-white">
-      {/* Subtle background glow */}
+    <section className="py-24 sm:py-32 md:py-36 relative overflow-hidden bg-white">
+      {/* 1. Prominent Lime-Yellow Aura on Top-Left (Matches Screenshot) */}
       <div 
-        className="pointer-events-none absolute -left-40 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#D4FB20]/15 blur-[120px] -z-10"
+        className="pointer-events-none absolute -left-20 -top-24 w-[600px] h-[600px] sm:w-[750px] sm:h-[750px] rounded-full bg-[#D4FB20]/35 blur-[120px] -z-10"
+        aria-hidden="true"
+      />
+      <div 
+        className="pointer-events-none absolute left-0 top-1/4 w-[450px] h-[450px] rounded-full bg-[#E5FF55]/25 blur-[100px] -z-10"
         aria-hidden="true"
       />
 
-      <div className="max-w-[1240px] mx-auto px-6">
+      {/* 2. Soft Blue Atmosphere on Right Behind Student */}
+      <div 
+        className="pointer-events-none absolute -right-20 top-1/3 w-[550px] h-[550px] rounded-full bg-[#003BE2]/10 blur-[120px] -z-10"
+        aria-hidden="true"
+      />
+
+      <div className="max-w-[1240px] mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Text & Stats */}
           <div className="lg:col-span-6 flex flex-col justify-center">
