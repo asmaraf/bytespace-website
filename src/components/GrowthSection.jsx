@@ -1,22 +1,29 @@
 import React from 'react';
+import GlowBlob from './GlowBlob';
 
 export default function GrowthSection() {
   return (
     <section className="py-24 sm:py-32 md:py-36 relative overflow-hidden bg-white">
-      {/* 1. Prominent Lime-Yellow Aura on Top-Left (Matches Screenshot) */}
-      <div 
-        className="pointer-events-none absolute -left-20 -top-24 w-[600px] h-[600px] sm:w-[750px] sm:h-[750px] rounded-full bg-[#D4FB20]/35 blur-[120px] -z-10"
-        aria-hidden="true"
+      {/* 1. Prominent Lime-Yellow Aura on Top-Left (Matches Figma) */}
+      <GlowBlob 
+        color="lime"
+        className="absolute -left-28 -top-28 w-[650px] h-[650px] sm:w-[780px] sm:h-[780px]"
+        blur="blur-[110px]"
+        opacity="opacity-75"
       />
-      <div 
-        className="pointer-events-none absolute left-0 top-1/4 w-[450px] h-[450px] rounded-full bg-[#E5FF55]/25 blur-[100px] -z-10"
-        aria-hidden="true"
+      <GlowBlob 
+        color="white"
+        className="absolute left-0 top-1/4 w-[450px] h-[450px]"
+        blur="blur-[90px]"
+        opacity="opacity-70"
       />
 
-      {/* 2. Soft Blue Atmosphere on Right Behind Student */}
-      <div 
-        className="pointer-events-none absolute -right-20 top-1/3 w-[550px] h-[550px] rounded-full bg-[#003BE2]/10 blur-[120px] -z-10"
-        aria-hidden="true"
+      {/* 2. Soft Blue Atmosphere on Right */}
+      <GlowBlob 
+        color="blue"
+        className="absolute -right-20 top-1/3 w-[550px] h-[550px]"
+        blur="blur-[100px]"
+        opacity="opacity-60"
       />
 
       <div className="max-w-[1240px] mx-auto px-6 relative z-10">
@@ -62,10 +69,24 @@ export default function GrowthSection() {
           {/* Right Column: Visual Showcase */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[580px] group transition-transform duration-500 hover:scale-[1.02]">
+              {/* Luminous Lime & White GlowBlob behind student showcase image */}
+              <GlowBlob
+                color="lime-white"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] sm:w-[620px] sm:h-[620px] -z-10"
+                blur="blur-[85px]"
+                opacity="opacity-95"
+              />
+              {/* Soft blue accent glow on right corner */}
+              <GlowBlob
+                color="blue"
+                className="absolute -right-6 top-1/3 w-[380px] h-[380px] -z-10"
+                blur="blur-[80px]"
+                opacity="opacity-60"
+              />
               <img
                 src="/assets/growth_showcase.png"
                 alt="Professional growth showcase"
-                className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.08)] select-none"
+                className="relative z-10 w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.08)] select-none"
                 loading="lazy"
               />
             </div>

@@ -1,10 +1,26 @@
 import React from 'react';
 import { testimonials } from '../data/coursesData';
+import GlowBlob from './GlowBlob';
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 bg-white relative">
-      <div className="max-w-[1240px] mx-auto px-6">
+    <section className="py-24 bg-white relative overflow-hidden">
+      {/* Figma Matched Lime Glow on Right */}
+      <GlowBlob
+        color="lime"
+        className="absolute -right-28 top-0 w-[700px] h-[700px] sm:w-[850px] sm:h-[850px]"
+        blur="blur-[120px]"
+        opacity="opacity-80"
+      />
+      {/* Figma Matched Blue Glow on Left */}
+      <GlowBlob
+        color="blue"
+        className="absolute -left-24 bottom-0 w-[600px] h-[600px]"
+        blur="blur-[110px]"
+        opacity="opacity-50"
+      />
+
+      <div className="max-w-[1240px] mx-auto px-6 relative z-10">
         {/* Header Row: Title & Subtitle side-by-side */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-[540px]">

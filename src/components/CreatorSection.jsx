@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GlowBlob from './GlowBlob';
 
 export default function CreatorSection() {
   const benefits = [
@@ -11,20 +12,26 @@ export default function CreatorSection() {
 
   return (
     <section id="creators" className="py-24 sm:py-32 md:py-36 relative overflow-hidden bg-white">
-      {/* 1. Radiant Lime-Yellow Atmosphere on Bottom-Left (Matches Screenshot) */}
-      <div 
-        className="pointer-events-none absolute -left-20 -bottom-16 w-[650px] h-[650px] sm:w-[750px] sm:h-[750px] rounded-full bg-[#D4FB20]/40 blur-[120px] -z-10"
-        aria-hidden="true"
+      {/* 1. Radiant Lime-Yellow Atmosphere on Bottom-Left */}
+      <GlowBlob
+        color="lime"
+        className="absolute -left-20 -bottom-16 w-[650px] h-[650px] sm:w-[750px] sm:h-[750px]"
+        blur="blur-[110px]"
+        opacity="opacity-75"
       />
-      <div 
-        className="pointer-events-none absolute left-0 bottom-24 w-[450px] h-[450px] rounded-full bg-[#EEFF55]/25 blur-[100px] -z-10"
-        aria-hidden="true"
+      <GlowBlob
+        color="white"
+        className="absolute left-0 bottom-24 w-[450px] h-[450px]"
+        blur="blur-[90px]"
+        opacity="opacity-70"
       />
 
       {/* 2. Soft Blue Atmosphere on Right */}
-      <div 
-        className="pointer-events-none absolute -right-24 top-1/4 w-[500px] h-[500px] rounded-full bg-[#003BE2]/10 blur-[120px] -z-10"
-        aria-hidden="true"
+      <GlowBlob
+        color="blue"
+        className="absolute -right-24 top-1/4 w-[500px] h-[500px]"
+        blur="blur-[100px]"
+        opacity="opacity-60"
       />
 
       {/* 3. Floating 3D Lime Ribbon Ornament (Bottom-Left from Figma) */}
@@ -44,10 +51,24 @@ export default function CreatorSection() {
           {/* Left Column: Visual Showcase */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-start order-2 lg:order-1">
             <div className="relative w-full max-w-[560px] p-2 group transition-transform duration-500 hover:scale-[1.02]">
+              {/* Luminous Lime & White GlowBlob behind creator showcase image */}
+              <GlowBlob
+                color="lime-white"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] sm:w-[600px] sm:h-[600px] -z-10"
+                blur="blur-[85px]"
+                opacity="opacity-95"
+              />
+              {/* Soft blue glow behind the revenue metrics cards on the left */}
+              <GlowBlob
+                color="blue"
+                className="absolute -left-10 top-1/4 w-[380px] h-[380px] -z-10"
+                blur="blur-[80px]"
+                opacity="opacity-70"
+              />
               <img
                 src="/assets/creator_showcase.png"
                 alt="Create & manage courses on ByteSpace"
-                className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.08)] select-none"
+                className="relative z-10 w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.08)] select-none"
                 loading="lazy"
               />
             </div>

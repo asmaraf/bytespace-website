@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import GlowBlob from './GlowBlob';
 
 export default function Hero({ onSearch }) {
   const [query, setQuery] = useState('');
@@ -77,10 +78,17 @@ export default function Hero({ onSearch }) {
 
           {/* Main Student Image */}
           <div className="relative z-10 w-[340px] sm:w-[460px] md:w-[540px] max-w-full">
+            {/* Luminous Lime & White GlowBlob behind student */}
+            <GlowBlob
+              color="lime-white"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] h-[460px] sm:w-[560px] sm:h-[560px] -z-10"
+              blur="blur-[90px]"
+              opacity="opacity-90"
+            />
             <img 
               src="/assets/hero_student.png" 
               alt="ByteSpace student with laptop and headphones" 
-              className="w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.12)] select-none" 
+              className="w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.12)] select-none relative z-10" 
             />
 
             {/* Floating Badge 1: UI/UX Design (Top-Left) */}
