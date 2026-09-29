@@ -186,18 +186,18 @@ export default function CoursesSection({ searchQuery = '' }) {
                 </div>
 
                 {/* Price & Action */}
-                <div className="flex items-center justify-between mt-3">
+                <div className="flex items-center justify-between mt-3.5 pt-1">
                   <div className="flex items-baseline gap-1">
-                    <span className="font-['Poppins'] font-bold text-xl text-[#003BE2]">
+                    <span className="font-['Poppins'] font-bold text-[22px] text-[#003BE2] tracking-tight">
                       {course.price}
                     </span>
-                    <span className="text-xs text-[#82868E] font-normal">
+                    <span className="text-xs text-[#82868E] font-medium">
                       {course.period}
                     </span>
                   </div>
                   <Link
                     to={`/courses/${course.id}`}
-                    className="text-xs font-semibold text-[#242528] bg-[#F5F5F6] hover:bg-[#D4FB20] px-3.5 py-1.5 rounded-full transition-colors cursor-pointer"
+                    className="text-xs font-semibold text-[#242528] bg-[#F5F5F6] hover:bg-[#D4FB20] hover:text-black px-4 py-2 rounded-full transition-all duration-200 cursor-pointer shadow-xs active:scale-95"
                   >
                     Enroll Now
                   </Link>
