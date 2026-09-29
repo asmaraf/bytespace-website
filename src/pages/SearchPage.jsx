@@ -425,9 +425,19 @@ export default function SearchPage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search"
+                placeholder="Search by course title, author or keyword..."
                 className="w-full bg-transparent text-[#242528] placeholder-[#82868E] text-base focus:outline-none"
               />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                  aria-label="Clear search"
+                  className="text-gray-400 hover:text-gray-600 p-1 text-sm rounded-full transition-colors cursor-pointer"
+                >
+                  ✕
+                </button>
+              )}
             </div>
 
             {/* Yellow/Lime Courses dropdown button */}
